@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Election Results</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Election Results</h1>
+
+  <div id="polling-unit-result">
+    <h2>Polling Unit Result</h2>
+    <div id="polling-unit-form">
+      <label for="polling-unit-select">Select Polling Unit:</label>
+      <select id="polling-unit-select">
+        <!-- Options will be dynamically populated here -->
+      </select>
+      <button id="fetch-polling-unit-result">Fetch Result</button>
+    </div>
+    <div id="polling-unit-result-container">
+      <!-- Result will be dynamically populated here -->
+    </div>
+  </div>
+
+  <div id="lga-result">
+    <h2>LGA Result</h2>
+    <div id="lga-form">
+      <label for="lga-select">Select LGA:</label>
+      <select id="lga-select">
+        <!-- Options will be dynamically populated here -->
+      </select>
+      <button id="fetch-lga-result">Fetch Result</button>
+    </div>
+    <div id="lga-result-container">
+      <!-- Result will be dynamically populated here -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
