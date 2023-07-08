@@ -1,6 +1,3 @@
-// Assuming you have an Express.js app instance called 'app'
-
-// Fetch polling units data and populate select options
 fetch('/polling-units')
   .then((response) => response.json())
   .then((data) => {
@@ -16,7 +13,6 @@ fetch('/polling-units')
     console.error('Error:', error);
   });
 
-// Fetch LGAs data and populate select options
 fetch('/lgas')
   .then((response) => response.json())
   .then((data) => {
@@ -41,7 +37,6 @@ fetch('/lgas')
     const pollingUnitSelect = document.getElementById('polling-unit-select');
     const pollingUnitId = pollingUnitSelect.value;
   
-    // Make an AJAX request to fetch the polling unit result
     fetch(`/polling-unit-result/${pollingUnitId}`)
       .then((response) => response.json())
       .then((data) => {
@@ -67,12 +62,9 @@ fetch('/lgas')
   
     const lgaSelect = document.getElementById('lga-select');
     const lgaId = lgaSelect.value;
-  
-    // Make an AJAX request to fetch the LGA result
     fetch(`/lga-result/${lgaId}`)
       .then((response) => response.json())
       .then((data) => {
-        // Display the LGA result in the result container
         const resultHtml = `
           <h3>Result for LGA: ${lgaId}</h3>
           <ul>
